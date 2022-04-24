@@ -11,12 +11,13 @@ documentation = "http://docs.rs/pickledb"
 keywords = ["database", "key-value-store", "db", "kv", "pickledb"]
 categories = ["database-implementations", "data-structures"]
 edition = "2018"
+resolver = "2"
 
 [badges]
 travis-ci = { repository = "seladb/pickledb-rs" }
 
 [dependencies]
-serde = { version = "1.0", features = ["derive"] }
+serde = "1.0"
 
 serde_json = { version = "1.0", optional = true }
 bincode = { version = "1.0", optional = true }
@@ -24,6 +25,7 @@ serde_yaml = { version = "0.8", optional = true }
 serde_cbor = { version = "0.11", optional = true }
 
 [dev-dependencies]
+serde = { version = "1.0", features = ["derive"] }
 rand = "0.6"
 rstest = "0.2"
 matches = "0.1"
